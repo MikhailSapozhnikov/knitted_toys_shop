@@ -1,0 +1,217 @@
+.product-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+  }
+  
+  .product-card-image {
+    position: relative;
+    padding-top: 100%;
+    background-color: #f9f9f9;
+    overflow: hidden;
+  }
+  
+  .product-card-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .product-card:hover .product-card-image img {
+    transform: scale(1.05);
+  }
+  
+  .product-card-badges {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1;
+  }
+  
+  .product-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 4px;
+    text-transform: uppercase;
+  }
+  
+  .product-badge-new {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .product-badge-discount {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .product-badge-outofstock {
+    background-color: #9e9e9e;
+    color: white;
+  }
+  
+  .product-card-add-to-cart {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #9c6644;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .product-card:hover .product-card-add-to-cart {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .product-card-add-to-cart:hover {
+    background-color: #875937;
+  }
+  
+  .product-card-info {
+    padding: 16px;
+  }
+  
+  .product-card-title {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 0 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    /* -webkit-line-clamp: 2; */
+    -webkit-box-orient: vertical;
+    line-height: 1.3;
+    min-height: 2.6em;
+  }
+  
+  .product-card-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .rating-stars {
+    display: flex;
+    gap: 2px;
+    margin-right: 8px;
+  }
+  
+  .star {
+    color: #ddd;
+    font-size: 16px;
+  }
+  
+  .star.filled {
+    color: #ffc107;
+  }
+  
+  .rating-value {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .product-card-price {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .product-price {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .product-price-old {
+    font-size: 14px;
+    color: #999;
+    text-decoration: line-through;
+  }
+  
+  /* Компактный вариант карточки */
+  .product-card-compact {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    box-shadow: none;
+    border: 1px solid #eee;
+  }
+  
+  .product-card-compact .product-card-link {
+    display: flex;
+  }
+  
+  .product-card-compact .product-card-image {
+    width: 80px;
+    height: 80px;
+    padding: 0;
+    flex-shrink: 0;
+  }
+  
+  .product-card-compact .product-card-info {
+    padding: 8px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .product-card-compact .product-card-title {
+    font-size: 14px;
+    /* -webkit-line-clamp: 1; */
+    min-height: auto;
+    margin-bottom: 4px;
+  }
+  
+  .product-card-compact .product-price {
+    font-size: 14px;
+  }
+  
+  .product-card-compact .product-price-old {
+    font-size: 12px;
+  }
+  
+  /* Адаптивность */
+  @media (max-width: 576px) {
+    .product-card-title {
+      font-size: 14px;
+    }
+    
+    .product-price {
+      font-size: 16px;
+    }
+  }

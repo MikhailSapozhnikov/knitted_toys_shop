@@ -1,0 +1,227 @@
+.filter-panel {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .filter-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .filter-panel-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    color: #333;
+  }
+  
+  .filter-panel-close {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #777;
+  }
+  
+  .filter-section {
+    margin-bottom: 24px;
+  }
+  
+  .filter-section:last-child {
+    margin-bottom: 0;
+  }
+  
+  .filter-section-title {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 0 12px;
+    color: #555;
+  }
+  
+  /* Стили для категорий */
+  .filter-category-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .filter-category-item {
+    margin-bottom: 8px;
+  }
+  
+  .filter-category-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .filter-category-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 8px 12px;
+    background: none;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    text-align: left;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .filter-category-button:hover {
+    background-color: #f9f5f2;
+    border-color: #e0d6d0;
+  }
+  
+  .filter-category-button.active {
+    background-color: #9c6644;
+    border-color: #9c6644;
+    color: white;
+  }
+  
+  .filter-category-count {
+    background-color: #f5f5f5;
+    color: #777;
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-size: 12px;
+    transition: all 0.3s;
+  }
+  
+  .filter-category-button.active .filter-category-count {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+  }
+  
+  /* Стили для фильтра цены */
+  .filter-price-inputs {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  
+  .filter-price-input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .filter-price-input:focus {
+    outline: none;
+    border-color: #9c6644;
+  }
+  
+  .filter-price-separator {
+    margin: 0 8px;
+    color: #777;
+  }
+  
+  .filter-price-buttons {
+    display: flex;
+    gap: 8px;
+  }
+  
+  /* Стили для чекбоксов */
+  .filter-checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .filter-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .filter-checkbox input {
+    margin-right: 8px;
+  }
+  
+  .filter-checkbox-text {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /* Мобильная кнопка фильтров */
+  .filter-panel-mobile-toggle {
+    display: none;
+    margin-bottom: 16px;
+  }
+  
+  .filter-mobile-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+  }
+  
+  .filter-active-indicator {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    background-color: #e53935;
+    border-radius: 50%;
+  }
+  
+  /* Затемнение фона для мобильных фильтров */
+  .filter-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+  }
+  
+  /* Адаптивность */
+  @media (max-width: 992px) {
+    .filter-panel {
+      max-width: 250px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .filter-panel {
+      position: fixed;
+      top: 0;
+      left: -320px;
+      bottom: 0;
+      width: 280px;
+      max-width: 80%;
+      border-radius: 0;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      overflow-y: auto;
+      z-index: 999;
+      transition: left 0.3s ease;
+    }
+    
+    .filter-panel-mobile-open {
+      left: 0;
+    }
+    
+    .filter-panel-close {
+      display: block;
+    }
+    
+    .filter-panel-mobile-toggle {
+      display: block;
+    }
+    
+    .filter-overlay {
+      display: block;
+    }
+  }

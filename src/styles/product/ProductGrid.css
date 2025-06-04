@@ -1,0 +1,82 @@
+.product-grid {
+    display: grid;
+    gap: 24px;
+  }
+  
+  /* Варианты сетки с разным количеством колонок */
+  .product-grid-1 {
+    grid-template-columns: 1fr;
+  }
+  
+  .product-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .product-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .product-grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .product-grid-5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  
+  .product-grid-6 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  
+  /* Стили для состояний загрузки, ошибки, пустого списка */
+  .product-grid-loading,
+  .product-grid-error,
+  .product-grid-empty {
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  .product-grid-error p,
+  .product-grid-empty p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  /* Адаптивная верстка */
+  @media (max-width: 1200px) {
+    .product-grid-5,
+    .product-grid-6 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .product-grid-4,
+    .product-grid-5,
+    .product-grid-6 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .product-grid {
+      gap: 16px;
+    }
+    
+    .product-grid-3,
+    .product-grid-4,
+    .product-grid-5,
+    .product-grid-6 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .product-grid-2,
+    .product-grid-3,
+    .product-grid-4,
+    .product-grid-5,
+    .product-grid-6 {
+      grid-template-columns: 1fr;
+    }
+  }

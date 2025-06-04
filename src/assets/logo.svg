@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg">
+  <rect width="240" height="60" fill="none"/>
+  <path d="M30 15 C40 5, 50 5, 60 15 C70 25, 70 35, 60 45 C50 55, 40 55, 30 45 C20 35, 20 25, 30 15 Z" fill="#f8e6e0" stroke="#9c6644" stroke-width="2"/>
+  <circle cx="40" cy="25" r="3" fill="#9c6644"/>
+  <circle cx="50" cy="25" r="3" fill="#9c6644"/>
+  <path d="M37 35 C40 40, 50 40, 53 35" fill="none" stroke="#9c6644" stroke-width="2" stroke-linecap="round"/>
+  <path d="M73 20 L73 45 M73 25 L78 20 M73 25 L68 20" stroke="#9c6644" stroke-width="2" stroke-linecap="round"/>
+  <text x="90" y="34" font-family="Arial" font-weight="bold" font-size="24" fill="#9c6644">Мягкие</text>
+  <text x="90" y="52" font-family="Arial" font-weight="bold" font-size="24" fill="#9c6644">Игрушки</text>
+</svg>
